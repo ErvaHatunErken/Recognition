@@ -11,6 +11,7 @@
 		8D39F70E26EFB95900F13C2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D39F70D26EFB95900F13C2D /* ContentView.swift */; };
 		8D39F71026EFB95A00F13C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D39F70F26EFB95A00F13C2D /* Assets.xcassets */; };
 		8D39F71326EFB95A00F13C2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D39F71226EFB95A00F13C2D /* Preview Assets.xcassets */; };
+		8D39F71B26EFC78300F13C2D /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D39F71A26EFC78300F13C2D /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		8D39F70F26EFB95A00F13C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D39F71226EFB95A00F13C2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8D39F71426EFB95A00F13C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D39F71A26EFC78300F13C2D /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				8D39F70B26EFB95900F13C2D /* RecognitionApp.swift */,
 				8D39F70D26EFB95900F13C2D /* ContentView.swift */,
+				8D39F71A26EFC78300F13C2D /* CameraView.swift */,
 				8D39F70F26EFB95A00F13C2D /* Assets.xcassets */,
 				8D39F71426EFB95A00F13C2D /* Info.plist */,
 				8D39F71126EFB95A00F13C2D /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D39F71B26EFC78300F13C2D /* CameraView.swift in Sources */,
 				8D39F70E26EFB95900F13C2D /* ContentView.swift in Sources */,
 				8D39F70C26EFB95900F13C2D /* RecognitionApp.swift in Sources */,
 			);

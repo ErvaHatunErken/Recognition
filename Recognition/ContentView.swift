@@ -8,9 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var image = UIImage()
+    @State private var showCameraView: Bool = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Image(uiImage: self.image)
+                .resizable()
+                .scaledToFill()
+            Button(action: {
+                self.showCameraView = true
+            }) {
+                HStack {
+                    Image(systemName: "camera")
+                        .font(.system(size: 24))
+                    Text("Take a photo")
+                        .font(.headline)
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(20)
+                .padding(.horizontal)
+            }
+        }
+        .sheet(isPresented: $showCameraView) {
+            CameraView(selectedImage: .constant(image), showCameraView: .constant(false))
+        }
     }
 }
 
