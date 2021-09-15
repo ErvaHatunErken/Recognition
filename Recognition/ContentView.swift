@@ -38,7 +38,8 @@ struct ContentView: View {
     .navigationBarTitle("Text Recognition")
     .sheet(isPresented: $showCameraView) {
         CameraView(showCameraView: self.$showCameraView, recognizedText: self.$recognizedText)
-    } 
+    }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
