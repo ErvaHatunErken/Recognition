@@ -8,14 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var image = UIImage()
+    //@State private var selectedImage = UIImage()
     @State private var showCameraView: Bool = false
-    
+    @State private var recognizedText = "Take a photo to start scanning."
     var body: some View {
         VStack {
-            Image(uiImage: self.image)
+            ScrollView {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                     .fill(Color.gray.opacity(0.2))
+                Text(recognizedText)
+                     .padding()
+                }
+                .padding()
+            }
+        Spacer()
+        HStack {
+            Spacer()
+            Button(action: {
+                self.showCameraView = true
+            }) {
+                Text("Start Scanning")
+            }
+            .padding()
+            .foregroundColor(.white)
+            .background(Capsule().fill(Color.blue))
+        }
+        .padding()
+    }
+    .navigationBarTitle("Text Recognition")
+    .sheet(isPresented: $showCameraView) {
+        CameraView(showCameraView: self.$showCameraView, recognizedText: self.$recognizedText)
+    }
+     /*
+        VStack {
+            Image(uiImage: selectedImage)
                 .resizable()
                 .scaledToFill()
+                .frame(minWidth: 0, maxWidth: .infinity)
             Button(action: {
                 self.showCameraView = true
             }) {
@@ -33,9 +63,11 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $showCameraView) {
-            CameraView(selectedImage: .constant(image), showCameraView: .constant(false))
-        }
+            CameraView(selectedImage: self.$selectedImage, showCameraView: self.$showCameraView)
+        }*/
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
